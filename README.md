@@ -1,4 +1,5 @@
 Fuzzy Logic Battery Management System (BMS) 🔋⚡
+
 Bu proje, batarya yönetim sistemi (BMS) üzerinde bulanık mantık (fuzzy logic) kullanarak batarya sağlığını değerlendiren ve batarya parametrelerini izleyen bir sistem geliştirmeyi amaçlamaktadır. Batarya sağlığı (SOH), sıcaklık, voltaj ve SOC (State of Charge - Şarj Durumu) gibi parametrelerle hesaplanır ve görselleştirilir.
 
 İçerik 📂
@@ -41,3 +42,11 @@ Python 3.x 🐍
 Numpy: Sayısal verilerin işlenmesi için.
 Matplotlib: Batarya parametrelerini görselleştirmek için.
 Bulanık Mantık (Fuzzy Logic): Batarya sağlığı hesaplamaları için.
+
+Ekran Görüntüleri
+![image](https://github.com/user-attachments/assets/a5834540-5342-4c1e-b325-ce7ef78e62dc)
+
+![image](https://github.com/user-attachments/assets/1643c220-d97f-4c1d-b266-1e3f562a483c)
+![image](https://github.com/user-attachments/assets/780b0dc5-8662-4037-8d4d-324dbc6a581e)
+
+
