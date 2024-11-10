@@ -2,7 +2,7 @@ import numpy as np
 
 # Fuzzy logic hesaplama fonksiyonu
 def compute_fuzzy_logic(temperature, voltage, soc):
-    # Üyelik fonksiyonları (değiştirilmiş)
+    # Üyelik fonksiyonları
     temp_low = max(0, min(1, (25 - temperature) / 25))  # Düşük sıcaklık
     temp_high = max(0, min(1, (temperature - 25) / 25))  # Yüksek sıcaklık
     
@@ -12,7 +12,7 @@ def compute_fuzzy_logic(temperature, voltage, soc):
     soc_low = max(0, min(1, (40 - soc) / 40))  # Düşük SOC
     soc_high = max(0, min(1, (soc - 40) / 60))  # Yüksek SOC
 
-    # 12 kural:
+    # Kurallar:
     # Kural 1: Sıcaklık ve voltaj düşükse -> Batarya sağlığı düşük
     rule1 = min(temp_low, voltage_low)
     # Kural 2: Sıcaklık düşük, voltaj yüksekse -> Batarya sağlığı orta
@@ -21,7 +21,6 @@ def compute_fuzzy_logic(temperature, voltage, soc):
     rule3 = min(temp_high, voltage_low)
     # Kural 4: Sıcaklık yüksek, voltaj yüksekse -> Batarya sağlığı iyi
     rule4 = min(temp_high, voltage_high)
-    
     # Kural 5: Sıcaklık düşük, SOC düşükse -> Batarya sağlığı çok kötü
     rule5 = min(temp_low, soc_low)
     # Kural 6: Sıcaklık düşük, SOC yüksekse -> Batarya sağlığı orta
@@ -30,7 +29,6 @@ def compute_fuzzy_logic(temperature, voltage, soc):
     rule7 = min(temp_high, soc_low)
     # Kural 8: Sıcaklık yüksek, SOC yüksekse -> Batarya sağlığı çok iyi
     rule8 = min(temp_high, soc_high)
-
     # Kural 9: Voltaj düşük, SOC düşükse -> Batarya sağlığı çok kötü
     rule9 = min(voltage_low, soc_low)
     # Kural 10: Voltaj düşük, SOC yüksekse -> Batarya sağlığı orta
