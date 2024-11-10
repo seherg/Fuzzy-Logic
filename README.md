@@ -1,4 +1,5 @@
 Fuzzy Logic Battery Management System (BMS) 🔋⚡
+![Soft Pink Minimalist Personal Growth Tips Graph](https://github.com/user-attachments/assets/3429d5aa-cc3f-4140-99c1-42efaa05a6bb)
 
 Bu proje, batarya yönetim sistemi (BMS) üzerinde bulanık mantık (fuzzy logic) kullanarak batarya sağlığını değerlendiren ve batarya parametrelerini izleyen bir sistem geliştirmeyi amaçlamaktadır. Batarya sağlığı (SOH), sıcaklık, voltaj ve SOC (State of Charge - Şarj Durumu) gibi parametrelerle hesaplanır ve görselleştirilir.
 
