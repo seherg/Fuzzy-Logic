@@ -6,9 +6,9 @@ def manage_battery():
     temperatures, voltages, socs, sohs = [], [], [], []  # sohs listesi eklendi
     time = np.array([1, 2, 3, 4, 5])  # 5 ölçüm
     
-    # Batarya kapasitesi ve güç (örnek değerler, gerçek değerler proje gereksinimlerine göre ayarlanabilir)
+    # Batarya kapasitesi ve güç
     battery_capacity = 50  # Batarya kapasitesi (kWh cinsinden)
-    power_consumption_rate = 5  # Tüketim oranı (kW cinsinden, örneğin arabanın ortalama güç tüketimi)
+    power_consumption_rate = 5  # Tüketim oranı (kW cinsinden)
     
     for i in range(5):
         print(f"\n--- {i+1}. Ölçüm ---")
@@ -25,7 +25,7 @@ def manage_battery():
         socs.append(soc)
         sohs.append(soh)  # sohs'e de değer ekleniyor
         
-        # Batarya durumunu emoji ile yazma
+        # Batarya durumunu
         if soh is not None:
             if soh >= 70:
                 print(f"🔋 Batarya Sağlık Durumu: 🟢 İyi (SOH: {soh:.2f}%)")
@@ -39,7 +39,7 @@ def manage_battery():
         print(f"🔌 Şarj Durumu (SOC): {soc:.2f}%")
         print(f"🌡️ Sıcaklık: {temperature}°C, Voltaj: {voltage}V\n")
         
-        # Kalan şarjın ne kadar sürede biteceğini hesapla
+        # Kalan şarjın ne kadar sürede biteceğini hesaplama
         remaining_capacity = (soc / 100) * battery_capacity  # Kalan kapasite (kWh)
         remaining_time = remaining_capacity / power_consumption_rate  # Kalan süre (saat cinsinden)
         print(f"🔋 Kalan Şarj Süresi: {remaining_time:.2f} saat")
