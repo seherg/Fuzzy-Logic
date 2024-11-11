@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 
 def visualize_battery_status(time, temperatures, voltages, socs, sohs):
-    """
-    Batarya parametrelerinin zaman içindeki değişimini görselleştiren fonksiyon.
-    """
+   
+    # Batarya parametrelerinin zaman içindeki değişimini görselleştiren fonksiyon.
+   
     plt.figure(figsize=(10, 8))
 
     # Sıcaklık grafiği
